@@ -127,107 +127,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Area\AreaBuilder.cs" />
-    <Compile Include="Area\FileReader.cs" />
-    <Compile Include="Area\StartPositions.cs" />
-    <Compile Include="Events\BirdHuntLectureInfoWriter.cs" />
-    <Compile Include="Events\BirdHuntLabInfoWriter.cs" />
-    <Compile Include="Events\PipeGameLabInfoWriter.cs" />
-    <Compile Include="Events\PipeGameLectureInfoWriter.cs" />
-    <Compile Include="Events\TdLabInfoWriter.cs" />
-    <Compile Include="Events\Dialog.cs" />
-    <Compile Include="Events\EventInfo.cs" />
-    <Compile Include="Events\EventInfoManager.cs" />
-    <Compile Include="Events\TdLectureInfoWriter.cs" />
-    <Compile Include="Events\WordSearchLabInfoWriter.cs" />
-    <Compile Include="Events\WordSearchLectureInfoWriter.cs" />
     <Compile Include="GameInfo.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="PlayerInformation.cs" />
-    <Compile Include="PlayerMeters\PlayerMeters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game.cs" />
-    <Compile Include="Quests\QuestChecking.cs" />
-    <Compile Include="Saving\SaveCharacterData.cs" />
-    <Compile Include="Scheduling\ScheduleDay.cs" />
-    <Compile Include="Scheduling\ScheduleWeek.cs" />
     <Compile Include="Service References\DBCommService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Sprites\BackButton.cs" />
-    <Compile Include="Sprites\BedSprite.cs" />
-    <Compile Include="Sprites\Birdhunt\Ammobar.cs" />
-    <Compile Include="Sprites\Birdhunt\Bird.cs" />
-    <Compile Include="Sprites\Birdhunt\BirdFall.cs" />
-    <Compile Include="Sprites\Birdhunt\BulletHole.cs" />
-    <Compile Include="Sprites\Birdhunt\Bullseye.cs" />
-    <Compile Include="Sprites\Birdhunt\Explosion.cs" />
-    <Compile Include="Sprites\Birdhunt\SkipButton.cs" />
-    <Compile Include="Sprites\Birdhunt\StartButton.cs" />
-    <Compile Include="Sprites\Clock.cs" />
-    <Compile Include="Scheduling\Schedule.cs" />
-    <Compile Include="Sprites\DoorEastSprite.cs" />
-    <Compile Include="Sprites\PipeGame_Tile.cs" />
-    <Compile Include="Sprites\Quest\CheckBox.cs" />
-    <Compile Include="Sprites\Quest\CompletedNodeSprite.cs" />
-    <Compile Include="Sprites\Quest\CongratStar.cs" />
-    <Compile Include="Sprites\Quest\GameMouse.cs" />
-    <Compile Include="Sprites\Quest\ReadMoreButton.cs" />
-    <Compile Include="Sprites\StudyDeskSprite.cs" />
-    <Compile Include="Sprites\LabDeskSprite.cs" />
-    <Compile Include="Sprites\LectureDeskSprite.cs" />
-    <Compile Include="Sprites\DoorWestSprite.cs" />
-    <Compile Include="Sprites\Login\ArrowButtonSprite.cs" />
-    <Compile Include="Sprites\Login\ButtonSprite.cs" />
-    <Compile Include="Sprites\Login\GameLauncher-EmailSprite.cs" />
-    <Compile Include="Sprites\Login\GameLauncher-LoginButtonSprite.cs" />
-    <Compile Include="Sprites\Login\GameLauncher-MousePointerSprite.cs" />
-    <Compile Include="Sprites\Login\GameLauncher-PasswordSprite.cs" />
-    <Compile Include="Sprites\Login\GameLauncher-RegisterButtonSprite.cs" />
-    <Compile Include="Sprites\Login\GameLauncherSprite.cs" />
-    <Compile Include="Sprites\Login\General-TextBox.cs" />
-    <Compile Include="Sprites\Login\MousePointerSprite.cs" />
-    <Compile Include="Sprites\Opening\BusSprite.cs" />
-    <Compile Include="Sprites\Opening\LogoSprite.cs" />
-    <Compile Include="Sprites\PlayerSprite.cs" />
-    <Compile Include="Sprites\TileSprite.cs" />
-    <Compile Include="Sprites\IsometricSprite.cs" />
-    <Compile Include="Sprites\MousePointer.cs" />
-    <Compile Include="Sprites\UsableIsometricSprite.cs" />
-    <Compile Include="Sprites\VendorSprite.cs" />
-    <Compile Include="Sprites\Vendor\VendorItem.cs" />
-    <Compile Include="Sprites\Washroom\DeadFlySprite.cs" />
-    <Compile Include="Sprites\Washroom\FlagSprite.cs" />
-    <Compile Include="Sprites\Washroom\FlySprite.cs" />
-    <Compile Include="Sprites\Washroom\ShootSprite.cs" />
-    <Compile Include="Sprites\Washroom\TargetSprite.cs" />
-    <Compile Include="Sprites\Washroom\WaterSprite.cs" />
-    <Compile Include="Sprites\WordSearch\WordSearchSprite.cs" />
-    <Compile Include="Sprites\WordSearch\WordSearch_CountDownTimer.cs" />
-    <Compile Include="Sprites\WordSearch\WordSearch_EndGameSprite.cs" />
-    <Compile Include="Sprites\WordSearch\WordSearch_LineBatch.cs" />
-    <Compile Include="Sprites\WordSearch\WordSearch_MouseSprite.cs" />
-    <Compile Include="Sprites\WordSearch\WordSearch_WordFind.cs" />
-    <Compile Include="States\AreaState.cs" />
-    <Compile Include="States\Birdhunt\BirdHuntState.cs" />
-    <Compile Include="States\Birdhunt\BirdMenuState.cs" />
-    <Compile Include="States\Birdhunt\HighScoreState.cs" />
-    <Compile Include="States\EndingPopUpState.cs" />
-    <Compile Include="States\EndingState.cs" />
-    <Compile Include="States\Quests\CongratzState.cs" />
-    <Compile Include="States\Quests\EmailDetailState.cs" />
-    <Compile Include="States\Quests\EmailViewState.cs" />
-    <Compile Include="States\LectureState.cs" />
-    <Compile Include="States\Login\ConfirmationPopup.cs" />
-    <Compile Include="States\Login\GameLauncherState.cs" />
-    <Compile Include="States\Login\LoadCharacter.cs" />
-    <Compile Include="States\Login\Loading.cs" />
-    <Compile Include="States\Login\MainMenu.cs" />
-    <Compile Include="States\Login\NewCharacter.cs" />
-    <Compile Include="States\Login\Options.cs" />
     <Compile Include="States\NetworkDefense\Character\Enemy.cs" />
     <Compile Include="States\NetworkDefense\Character\EnemyWave.cs" />
     <Compile Include="States\NetworkDefense\Environment\GameSprite.cs" />
@@ -260,20 +170,6 @@
     <Compile Include="States\NetworkDefense\UI\Button.cs" />
     <Compile Include="States\NetworkDefense\UI\UICreator.cs" />
     <Compile Include="States\NetworkDefense\UI\Window.cs" />
-    <Compile Include="States\OpenningState.cs" />
-    <Compile Include="States\PipeGame_GameState.cs" />
-    <Compile Include="States\PipeGame_StartState.cs" />
-    <Compile Include="States\SleepState.cs" />
-    <Compile Include="States\StudyState.cs" />
-    <Compile Include="States\VendorState.cs" />
-    <Compile Include="States\Washroom\IntroState.cs" />
-    <Compile Include="States\Washroom\ResultState.cs" />
-    <Compile Include="States\Washroom\WashRoomState.cs" />
-    <Compile Include="States\WordSearch\WordSearch_EndGameState.cs" />
-    <Compile Include="States\WordSearch\WordSearch_MainState.cs" />
-    <Compile Include="States\WordSearch\WordSearch_WordGenerator.cs" />
-    <Compile Include="Tools\ImageDecoder.cs" />
-    <Compile Include="UI\AttributeMeters.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
@@ -358,10 +254,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="end\" />
-    <Folder Include="Sprites\Textures\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>

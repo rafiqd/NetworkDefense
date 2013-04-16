@@ -5,9 +5,6 @@ using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
-/*
- * Authors: Sam and Rafiq
- */
 namespace Game.States.TDsrc.Environment
 {
     /// <summary>

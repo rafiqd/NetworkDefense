@@ -7,9 +7,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Engine;
 
-/*
- * Authors: Sam and Rafiq
- */
+
 namespace Game.Sprites
 {
     /// <summary>

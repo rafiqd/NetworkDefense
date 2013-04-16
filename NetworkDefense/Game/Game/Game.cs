@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Game.Events;
-using Game.Saving;
 using Game.States;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
@@ -12,6 +10,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Engine;
+using Game.States.TDsrc.TDStates;
 
 namespace Game
 {
@@ -48,28 +47,9 @@ namespace Game
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             base.LoadContent();
-
             anim1 = Content.Load<GifAnimation.GifAnimation>("chip4");
             anim2 = Content.Load<GifAnimation.GifAnimation>("mob1");
-            // TODO: use this.Content to load your game content here
-
-            EventInfoManager LectureManager = new BirdHuntLectureInfoWriter();
-            LectureManager.Write();
-            LectureManager = new BirdHuntLabInfoWriter();
-            LectureManager.Write();
-            LectureManager = new PipeGameLectureInfoWriter();
-            LectureManager.Write();
-            LectureManager = new PipeGameLabInfoWriter();
-            LectureManager.Write();
-            LectureManager = new TdLectureInfoWriter();
-            LectureManager.Write();
-            LectureManager = new TdLabInfoWriter();
-            LectureManager.Write();
-            LectureManager = new WordSearchLectureInfoWriter();
-            LectureManager.Write();
-            LectureManager = new WordSearchLabInfoWriter();
-            LectureManager.Write();
-            TPEngine.Get().State.PushState(new OpenningState(), true);
+            TPEngine.Get().State.PushState(new TDBaseState(), true);
         }
 
         /// <summary>
@@ -88,7 +68,6 @@ namespace Game
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-
             base.Update(gameTime);
         }
 
@@ -105,12 +84,5 @@ namespace Game
             base.Draw(gameTime);
         }
 
-        protected override void OnExiting(Object sender, EventArgs args)
-        {
-            base.OnExiting(sender, args);
-            if(AreaState.character != null)
-                SaveCharacterData.Save();
-            // Stop the threads
-        }
     }
 }

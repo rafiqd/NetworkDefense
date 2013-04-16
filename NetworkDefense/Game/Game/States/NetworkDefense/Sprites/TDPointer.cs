@@ -7,9 +7,7 @@ using Engine.Objects;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-/*
- * Authors: Sam and Rafiq
- */
+
 namespace Game.Sprites
 {
     /// <summary>

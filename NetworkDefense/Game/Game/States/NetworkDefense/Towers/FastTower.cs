@@ -7,9 +7,6 @@ using Game.States.TDsrc.Management;
 using Game.Sprites;
 using Game.States.TDsrc.Character;
 
-/*
- * Authors: Sam and Rafiq
- */
 namespace Game.States.TDsrc.Towers
 {
     /// <summary>

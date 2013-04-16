@@ -8,14 +8,11 @@ using Game.States.TDsrc.Character;
 using Game.States.TDsrc.Environment;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
-using Game.Area;
 using Engine.StateManagement;
 using Microsoft.Xna.Framework.Graphics;
 using Game.States;
 
-/*
- * Authors: Sam and Rafiq
- */
+
 namespace Game.Sprites
 {
     /// <summary>

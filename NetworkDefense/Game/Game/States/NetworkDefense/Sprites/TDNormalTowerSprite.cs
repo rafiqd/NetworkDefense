@@ -9,7 +9,7 @@ using Engine;
 using Game.States.TDsrc.Environment;
 
 /*
- * Authors: Sam and Rafiq
+ * Author: Rafiq
  */
 namespace Game.Sprites
 {

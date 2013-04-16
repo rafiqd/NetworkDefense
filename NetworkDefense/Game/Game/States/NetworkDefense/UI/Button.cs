@@ -9,9 +9,7 @@ using Game.States.TDsrc.Management;
 using Microsoft.Xna.Framework.Input;
 using Game.States.TDsrc.Towers;
 
-/*
- * Authors: Sam and Rafiq
- */
+
 namespace Game.States.TDsrc.UI
 {
     /// <summary>

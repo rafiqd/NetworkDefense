@@ -6,9 +6,6 @@ using Game.States.TDsrc.Character;
 using Game.States.TDsrc.Management;
 using Game.Sprites;
 
-/*
- * Authors: Sam and Rafiq
- */
 namespace Game.States.TDsrc.Projectiles
 {
     /// <summary>

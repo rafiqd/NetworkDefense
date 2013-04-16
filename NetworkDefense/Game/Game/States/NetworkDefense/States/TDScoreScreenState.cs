@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using DBCommService;
 using Engine.StateManagement;
-using Game.Saving;
 using Microsoft.Xna.Framework.Graphics;
 using Engine.Objects;
 using Game.Sprites;
@@ -91,29 +90,7 @@ namespace Game.States.TDsrc.TDStates
         /// <param name="text"></param>
         public void quitGame(string text)
         {
-            UpdateDbScore();
-            TPEngine.Get().State.PopState();
-            TPEngine.Get().State.PopState();
-        }
-
-        /// <summary>
-        /// Updates the score stored in the database
-        /// </summary>
-        public void UpdateDbScore()
-        {
-            User user = GameLauncher_LoginButtonSprite.getUser();
-            if (user == null || user.id == 0)
-                return;
-            DBCommServiceClient server = new DBCommServiceClient();
-            MinigameScore minigame = new MinigameScore();
-            DBCommService.Character character = server.LoadCharacterData(user);
-            minigame.CharacterID = character.id;
-            minigame.CharacterName = character.name;
-            minigame.Lecture_Attended = false;
-            minigame.Score = TDPlayerStats.Grade;
-            minigame.MinigameID = 4;
-            server.SaveMinigameScore(user, minigame);
-            character.global_score += minigame.Score;
+            TPEngine.Get().GameRef.Exit();
         }
 
         /// <summary>
@@ -125,7 +102,7 @@ namespace Game.States.TDsrc.TDStates
             base.Draw(batch);
             batch.Begin();
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Lab Grade:           " + TDPlayerStats.Grade + "/100");
+            sb.AppendLine("Score:           " + TDPlayerStats.Grade + "/100");
             sb.AppendLine("Virus' Killed:       " + TDPlayerStats.KillCount);
             sb.AppendLine("Remaining Money:     " + TDPlayerStats.Money);
             batch.DrawString(Font, sb.ToString(), new Vector2(TPEngine.Get().ScreenSize.Width / 2 - 100, 200), new Color(0, 240, 240));

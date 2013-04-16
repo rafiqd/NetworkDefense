@@ -13,9 +13,7 @@ using Engine.Objects;
 using Engine;
 using Game.States.TDsrc.Management;
 
-/*
- * Authors: Sam and Rafiq
- */
+
 namespace Game.States.TDsrc.Towers
 {
     /// <summary>

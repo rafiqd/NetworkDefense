@@ -5,9 +5,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Storage;
 
-/*
- * Authors: Sam and Rafiq
- */
+
 namespace Game.States.TDsrc.Environment
 {
     /// <summary>

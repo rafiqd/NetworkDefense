@@ -15,7 +15,7 @@ using Engine;
 using Game.States.TDsrc.TDStates;
 
 /*
- * Authors: Sam and Rafiq
+ * Author: Rafiq
  */
 namespace Game.States.TDsrc.Management
 {
@@ -115,7 +115,7 @@ namespace Game.States.TDsrc.Management
                 //LastWaveUpdate = gametime.TotalGameTime;
             }
 
-            if (TDPlayerStats.Grade <= 45)
+            if (TDPlayerStats.Grade <= 0)
             {
                 TPEngine.Get().State.PopState();
                 TPEngine.Get().State.PushState(new TDScoreScreenState());
@@ -123,7 +123,7 @@ namespace Game.States.TDsrc.Management
 
             if(Keyboard.GetState().IsKeyDown(Keys.X) && !clicked)
             {
-                TDPlayerStats.Grade = 15;
+                TDPlayerStats.Grade = 0;
                 TPEngine.Get().State.PopState();
                 TPEngine.Get().State.PushState(new TDScoreScreenState());
                 clicked = true;

@@ -6,9 +6,6 @@ using Microsoft.Xna.Framework;
 using Game.States.TDsrc.Character;
 using Engine.Objects;
 
-/*
- * Authors: Sam and Rafiq
- */
 namespace Game.States.TDsrc.Projectiles
 {
     /// <summary>

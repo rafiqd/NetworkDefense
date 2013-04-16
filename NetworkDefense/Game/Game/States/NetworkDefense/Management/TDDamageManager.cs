@@ -4,9 +4,6 @@ using System.Linq;
 using System.Text;
 using Game.States.TDsrc.Projectiles;
 
-/*
- * Authors: Sam and Rafiq
- */
 namespace Game.States.TDsrc.Management
 {
     /// <summary>

@@ -117,28 +117,6 @@ namespace Game.States
             sb.Append("Current Wave: " + TDPlayerStats.currentWave + "/" + TDPlayerStats.maxWaves);
             batch.DrawString(Font, sb.ToString(), new Vector2(50, 50), new Color(0, 240, 240));
             sb.Clear();
-            sb.AppendLine("Current Color: ");
-            Color textColor = new Color(0, 240, 240);
-            batch.DrawString(Font, sb.ToString(), new Vector2(0, 480), textColor);
-            switch (UICreator.CurrentColor)
-            {
-                case "Red":
-                    textColor = Color.Red;
-                    break;
-                case "Blue":
-                    textColor = Color.Blue;
-                    break;
-                case "Yellow":
-                    textColor = Color.Yellow;
-                    break;
-                case "Green":
-                    textColor = Color.Green;
-                    break;
-            }
-            sb.Clear();
-            sb.AppendLine(UICreator.CurrentColor);
-            batch.DrawString(Font, sb.ToString(), new Vector2(100, 520), textColor);
-            sb = null;
         }
 
         /// <summary>
@@ -150,20 +128,7 @@ namespace Game.States
         {
 
             TowerDefenseManager.Update(gameTime, Keyboard.GetState(), Mouse.GetState());
-            /*
-            #region mapcreator input handling
-            if (Keyboard.GetState().IsKeyDown(Keys.P))
-            {
-                mp.update(Mouse.GetState().X, Mouse.GetState().Y);
-            }
-
-            if (Keyboard.GetState().IsKeyDown(Keys.S))
-            {
-                mp.save();
-            }
-            #endregion
-            */
-
+          
             base.Update(gameTime);
         }
     }

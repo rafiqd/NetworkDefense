@@ -14,7 +14,6 @@ using Microsoft.Xna.Framework.Input;
 using Game.States.TDsrc.Environment;
 using Game.States.TDsrc.Towers;
 using Game.States.TDsrc.Stats;
-using Game.Events;
 using Microsoft.Win32;
 
 namespace Game.States.TDsrc.TDStates
@@ -97,19 +96,7 @@ namespace Game.States.TDsrc.TDStates
                 Tower.ResetTowerLocks();
                 TDPlayerStats.ResetStats();
                 TPEngine.Get().State.PopState();
-                TPEngine.Get().State.PushState(new TDState(), true);
-                RegistryKey mykey = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\" + TdLectureInfoWriter.Key_Folder);
-                string color1 = (string)mykey.GetValue(TdLectureInfoWriter.Key_Color1);
-                string color2 = (string)mykey.GetValue(TdLectureInfoWriter.Key_Color2);
-                int dmg1 = (int)mykey.GetValue(TdLectureInfoWriter.Key_Dmg1);
-                int dmg2 = (int)mykey.GetValue(TdLectureInfoWriter.Key_Dmg2);
-                
-                if(color1 != null && color1 != "")
-                {
-                    TDDamageManager.setDamage(color1,color2,dmg1,dmg2);
-                }
-
-                                            
+                TPEngine.Get().State.PushState(new TDState(), true);                            
                 dead = true;
             }
             
@@ -123,9 +110,8 @@ namespace Game.States.TDsrc.TDStates
         {
             if(!dead)
             {
-                TPEngine.Get().State.PopState();
-                TPEngine.Get().State.PopState();
                 dead = true;
+                TPEngine.Get().GameRef.Exit();
             }
             
         }

@@ -8,9 +8,7 @@ using Microsoft.Xna.Framework;
 using Game.States.TDsrc.Management;
 using Microsoft.Xna.Framework.Input;
 
-/*
- * Authors: Sam and Rafiq
- */
+
 namespace Game.States.TDsrc.UI
 {
     

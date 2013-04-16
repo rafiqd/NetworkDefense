@@ -6,9 +6,7 @@ using Engine;
 using Microsoft.Xna.Framework.Graphics;
 using Game.States.TDsrc.Towers;
 
-/*
- * Authors: Sam and Rafiq
- */
+
 namespace Game.States.TDsrc.UI
 {
 
@@ -49,8 +47,6 @@ namespace Game.States.TDsrc.UI
         {
             CreateBottomBar();
             CreateBuyWindow();
-            createColorMenu();
-            CurrentColor = "Red";
         }
 
         /// <summary>
@@ -72,27 +68,7 @@ namespace Game.States.TDsrc.UI
             NormalTower.UnlockTowerClass();
         }
 
-        /// <summary>
-        /// creates the colour menu
-        /// </summary>
-        public static void createColorMenu()
-        {
-            string[] colors = { "Red", "Green", "Yellow", "Blue" };
-            ColorMenu = new Window(0, 550, true, TPEngine.Get().TextureManager.LoadTexture(@"art/TowerDefense/ColorMenu"));
-            for (int i = 0; i < 4; ++i)
-            {
-                ColorMenu.addButton(TPEngine.Get().TextureManager.LoadTexture(@"art/TowerDefense/" + colors[i] + "button"), colors[i], setColor);
-            }
-        }
-
-        /// <summary>
-        /// sets the current colour
-        /// </summary>
-        /// <param name="color">color you want to set it to</param>
-        public static void setColor(string color)
-        {
-            CurrentColor = color;
-        }
+       
 
         /// <summary>
         /// toggles the buymenu visible/invisible
