@@ -1,0 +1,16 @@
+11,15
+tttttwtttttwttt
+vtttttttttttttt
+ttttttttttttttt
+tttxxxxxxxxxxxx
+tptxxxxxxxxxxxx
+ettxxxxxxxxxxxx
+tttxxxxxxxxxxxx
+tttxxxxxxxxxxxx
+tttttwtttttwttt
+vtttttttttttttt
+ttttttttttttttt
+studyhall
+dormroom
+lab
+lecturehall

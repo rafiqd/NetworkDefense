@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DBCommContract" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IDBCommService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/DBCommService.DataContracts" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDBCommService_GetUserDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_GetUserDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_SendPasswordResetEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendPasswordResetEmail" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_SendPasswordResetEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendPasswordResetEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_LoadCharacterData_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadCharacterData" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_LoadCharacterData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadCharacterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_SaveNewCharacterData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveNewCharacterData" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_SaveNewCharacterData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveNewCharacterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_SaveExistingCharacterData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveExistingCharacterData" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_SaveExistingCharacterData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveExistingCharacterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_SaveMinigameScore_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMinigameScore" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_SaveMinigameScore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMinigameScoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_GetMinigameHighScores_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMinigameHighScores" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_GetMinigameHighScores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMinigameHighScoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_LoadQuestData_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadQuestData" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_LoadQuestData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadQuestDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_SaveQuestAssociation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveQuestAssociation" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_SaveQuestAssociation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveQuestAssociationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_UpdateQuestAssociation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateQuestAssociation" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_UpdateQuestAssociation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateQuestAssociationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_GetLectureAttended_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLectureAttended" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_GetLectureAttended_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLectureAttendedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_SetLectureAttended_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetLectureAttended" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_SetLectureAttended_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetLectureAttendedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_DeleteCharacter_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCharacter" />
+  </wsdl:message>
+  <wsdl:message name="IDBCommService_DeleteCharacter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCharacterResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="IDBCommService">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetUserDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBCommService/GetUserDetails" message="tns:IDBCommService_GetUserDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBCommService/GetUserDetailsResponse" message="tns:IDBCommService_GetUserDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SendPasswordResetEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBCommService/SendPasswordResetEmail" message="tns:IDBCommService_SendPasswordResetEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBCommService/SendPasswordResetEmailResponse" message="tns:IDBCommService_SendPasswordResetEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="LoadCharacterData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBCommService/LoadCharacterData" message="tns:IDBCommService_LoadCharacterData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBCommService/LoadCharacterDataResponse" message="tns:IDBCommService_LoadCharacterData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SaveNewCharacterData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBCommService/SaveNewCharacterData" message="tns:IDBCommService_SaveNewCharacterData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBCommService/SaveNewCharacterDataResponse" message="tns:IDBCommService_SaveNewCharacterData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SaveExistingCharacterData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBCommService/SaveExistingCharacterData" message="tns:IDBCommService_SaveExistingCharacterData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBCommService/SaveExistingCharacterDataResponse" message="tns:IDBCommService_SaveExistingCharacterData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SaveMinigameScore">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBCommService/SaveMinigameScore" message="tns:IDBCommService_SaveMinigameScore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBCommService/SaveMinigameScoreResponse" message="tns:IDBCommService_SaveMinigameScore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetMinigameHighScores">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBCommService/GetMinigameHighScores" message="tns:IDBCommService_GetMinigameHighScores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBCommService/GetMinigameHighScoresResponse" message="tns:IDBCommService_GetMinigameHighScores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="LoadQuestData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBCommService/LoadQuestData" message="tns:IDBCommService_LoadQuestData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBCommService/LoadQuestDataResponse" message="tns:IDBCommService_LoadQuestData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SaveQuestAssociation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBCommService/SaveQuestAssociation" message="tns:IDBCommService_SaveQuestAssociation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBCommService/SaveQuestAssociationResponse" message="tns:IDBCommService_SaveQuestAssociation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="UpdateQuestAssociation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBCommService/UpdateQuestAssociation" message="tns:IDBCommService_UpdateQuestAssociation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBCommService/UpdateQuestAssociationResponse" message="tns:IDBCommService_UpdateQuestAssociation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetLectureAttended">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBCommService/GetLectureAttended" message="tns:IDBCommService_GetLectureAttended_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBCommService/GetLectureAttendedResponse" message="tns:IDBCommService_GetLectureAttended_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SetLectureAttended">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBCommService/SetLectureAttended" message="tns:IDBCommService_SetLectureAttended_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBCommService/SetLectureAttendedResponse" message="tns:IDBCommService_SetLectureAttended_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="DeleteCharacter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBCommService/DeleteCharacter" message="tns:IDBCommService_DeleteCharacter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBCommService/DeleteCharacterResponse" message="tns:IDBCommService_DeleteCharacter_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IDBCommService" type="tns:IDBCommService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IDBCommService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetUserDetails">
+      <soap12:operation soapAction="http://tempuri.org/IDBCommService/GetUserDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPasswordResetEmail">
+      <soap12:operation soapAction="http://tempuri.org/IDBCommService/SendPasswordResetEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCharacterData">
+      <soap12:operation soapAction="http://tempuri.org/IDBCommService/LoadCharacterData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveNewCharacterData">
+      <soap12:operation soapAction="http://tempuri.org/IDBCommService/SaveNewCharacterData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveExistingCharacterData">
+      <soap12:operation soapAction="http://tempuri.org/IDBCommService/SaveExistingCharacterData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMinigameScore">
+      <soap12:operation soapAction="http://tempuri.org/IDBCommService/SaveMinigameScore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMinigameHighScores">
+      <soap12:operation soapAction="http://tempuri.org/IDBCommService/GetMinigameHighScores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadQuestData">
+      <soap12:operation soapAction="http://tempuri.org/IDBCommService/LoadQuestData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveQuestAssociation">
+      <soap12:operation soapAction="http://tempuri.org/IDBCommService/SaveQuestAssociation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQuestAssociation">
+      <soap12:operation soapAction="http://tempuri.org/IDBCommService/UpdateQuestAssociation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLectureAttended">
+      <soap12:operation soapAction="http://tempuri.org/IDBCommService/GetLectureAttended" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLectureAttended">
+      <soap12:operation soapAction="http://tempuri.org/IDBCommService/SetLectureAttended" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCharacter">
+      <soap12:operation soapAction="http://tempuri.org/IDBCommService/DeleteCharacter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DBCommContract">
+    <wsdl:port name="NetTcpBinding_IDBCommService" binding="tns:NetTcpBinding_IDBCommService">
+      <soap12:address location="net.tcp://142.232.17.225:10000/DBCommService/" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://142.232.17.225:10000/DBCommService/</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>142.232.17.225</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

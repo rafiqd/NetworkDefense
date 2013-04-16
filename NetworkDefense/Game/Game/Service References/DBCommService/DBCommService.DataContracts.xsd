@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DBCommService.DataContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DBCommService.DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element name="creds" nillable="true" type="tns:UserCredentials" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="is_banned" type="xs:boolean" />
+      <xs:element name="username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="UserCredentials">
+    <xs:sequence>
+      <xs:element name="email" nillable="true" type="xs:string" />
+      <xs:element name="password" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserCredentials" nillable="true" type="tns:UserCredentials" />
+  <xs:complexType name="Character">
+    <xs:sequence>
+      <xs:element name="Quests" nillable="true" type="tns:ArrayOfQuest" />
+      <xs:element name="bladder" nillable="true" type="xs:int" />
+      <xs:element name="day" type="xs:int" />
+      <xs:element name="energy" nillable="true" type="xs:int" />
+      <xs:element name="fun" nillable="true" type="xs:int" />
+      <xs:element name="global_score" type="xs:int" />
+      <xs:element name="grades" type="xs:int" />
+      <xs:element name="hour" type="xs:int" />
+      <xs:element name="hunger" nillable="true" type="xs:int" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="minute" type="xs:int" />
+      <xs:element name="money" nillable="true" type="xs:int" />
+      <xs:element name="name" nillable="true" type="xs:string" />
+      <xs:element name="position" nillable="true" type="xs:string" />
+      <xs:element name="sanity" nillable="true" type="xs:int" />
+      <xs:element name="sex" nillable="true" type="xs:string" />
+      <xs:element name="week" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Character" nillable="true" type="tns:Character" />
+  <xs:complexType name="ArrayOfQuest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Quest" nillable="true" type="tns:Quest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQuest" nillable="true" type="tns:ArrayOfQuest" />
+  <xs:complexType name="Quest">
+    <xs:sequence>
+      <xs:element name="Nodes" nillable="true" type="tns:ArrayOfQuestNode" />
+      <xs:element name="current_node" type="xs:int" />
+      <xs:element name="day_assigned" type="xs:int" />
+      <xs:element name="description" nillable="true" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="num_nodes" type="xs:int" />
+      <xs:element name="week_assigned" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Quest" nillable="true" type="tns:Quest" />
+  <xs:complexType name="ArrayOfQuestNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QuestNode" nillable="true" type="tns:QuestNode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQuestNode" nillable="true" type="tns:ArrayOfQuestNode" />
+  <xs:complexType name="QuestNode">
+    <xs:sequence>
+      <xs:element name="InteractiveObject" nillable="true" type="xs:string" />
+      <xs:element name="NodeLocation" nillable="true" type="xs:string" />
+      <xs:element name="NodeType" type="tns:QuestNodeType" />
+      <xs:element name="NodeValue" type="xs:int" />
+      <xs:element name="QuestDescription" nillable="true" type="tns:QuestEmail" />
+      <xs:element name="accumulated_value" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuestNode" nillable="true" type="tns:QuestNode" />
+  <xs:simpleType name="QuestNodeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Goto" />
+      <xs:enumeration value="Money" />
+      <xs:enumeration value="Sanity" />
+      <xs:enumeration value="Bladder" />
+      <xs:enumeration value="Energy" />
+      <xs:enumeration value="Use" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="QuestNodeType" nillable="true" type="tns:QuestNodeType" />
+  <xs:complexType name="QuestEmail">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="Body" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element name="Sender" nillable="true" type="xs:string" />
+      <xs:element name="Subject" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuestEmail" nillable="true" type="tns:QuestEmail" />
+  <xs:complexType name="MinigameScore">
+    <xs:sequence>
+      <xs:element name="CharacterID" type="xs:int" />
+      <xs:element name="CharacterName" nillable="true" type="xs:string" />
+      <xs:element name="Lecture_Attended" type="xs:boolean" />
+      <xs:element name="MinigameID" type="xs:int" />
+      <xs:element name="Score" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MinigameScore" nillable="true" type="tns:MinigameScore" />
+  <xs:complexType name="ArrayOfMinigameScore">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MinigameScore" nillable="true" type="tns:MinigameScore" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMinigameScore" nillable="true" type="tns:ArrayOfMinigameScore" />
+</xs:schema>

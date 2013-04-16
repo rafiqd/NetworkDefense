@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="03bd0b63-620a-4224-a43a-0291b8650ff1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://142.232.17.225:10000/DBCommService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="07beb0de-acde-46c6-9f78-b416a7cf976f" SourceId="1" SourceUrl="net.tcp://142.232.17.225:10000/DBCommService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="d5595d73-5e8b-4273-b2d1-921830b944a9" SourceId="1" SourceUrl="net.tcp://142.232.17.225:10000/DBCommService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="090541f5-8b22-43fe-a3d4-ac039d4e3106" SourceId="1" SourceUrl="net.tcp://142.232.17.225:10000/DBCommService/mex" />
+    <MetadataFile FileName="DBCommService.DataContracts.xsd" MetadataType="Schema" ID="ec01e87b-9e57-4984-a6d6-072b6c3aa78f" SourceId="1" SourceUrl="net.tcp://142.232.17.225:10000/DBCommService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="2dd85bdf-ed2a-493a-b9f4-122cde5c88a2" SourceId="1" SourceUrl="net.tcp://142.232.17.225:10000/DBCommService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

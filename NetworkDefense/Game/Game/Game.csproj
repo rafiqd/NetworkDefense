@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{2A8EB5CF-C2CE-4EA9-A924-E7F929F81F54}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Game</RootNamespace>
+    <AssemblyName>Game</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <XnaProfile>HiDef</XnaProfile>
+    <XnaCrossPlatformGroupID>10a8a680-7b62-4278-a148-509977231d5f</XnaCrossPlatformGroupID>
+    <XnaOutputType>Game</XnaOutputType>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <Thumbnail>GameThumbnail.png</Thumbnail>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Ray\Desktop\publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>false</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C2D899AB74CF98EB51988B96054D95AE68EEBE78</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Game_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Video, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Avatar, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Area\AreaBuilder.cs" />
+    <Compile Include="Area\FileReader.cs" />
+    <Compile Include="Area\StartPositions.cs" />
+    <Compile Include="Events\BirdHuntLectureInfoWriter.cs" />
+    <Compile Include="Events\BirdHuntLabInfoWriter.cs" />
+    <Compile Include="Events\PipeGameLabInfoWriter.cs" />
+    <Compile Include="Events\PipeGameLectureInfoWriter.cs" />
+    <Compile Include="Events\TdLabInfoWriter.cs" />
+    <Compile Include="Events\Dialog.cs" />
+    <Compile Include="Events\EventInfo.cs" />
+    <Compile Include="Events\EventInfoManager.cs" />
+    <Compile Include="Events\TdLectureInfoWriter.cs" />
+    <Compile Include="Events\WordSearchLabInfoWriter.cs" />
+    <Compile Include="Events\WordSearchLectureInfoWriter.cs" />
+    <Compile Include="GameInfo.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="PlayerInformation.cs" />
+    <Compile Include="PlayerMeters\PlayerMeters.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Quests\QuestChecking.cs" />
+    <Compile Include="Saving\SaveCharacterData.cs" />
+    <Compile Include="Scheduling\ScheduleDay.cs" />
+    <Compile Include="Scheduling\ScheduleWeek.cs" />
+    <Compile Include="Service References\DBCommService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Sprites\BackButton.cs" />
+    <Compile Include="Sprites\BedSprite.cs" />
+    <Compile Include="Sprites\Birdhunt\Ammobar.cs" />
+    <Compile Include="Sprites\Birdhunt\Bird.cs" />
+    <Compile Include="Sprites\Birdhunt\BirdFall.cs" />
+    <Compile Include="Sprites\Birdhunt\BulletHole.cs" />
+    <Compile Include="Sprites\Birdhunt\Bullseye.cs" />
+    <Compile Include="Sprites\Birdhunt\Explosion.cs" />
+    <Compile Include="Sprites\Birdhunt\SkipButton.cs" />
+    <Compile Include="Sprites\Birdhunt\StartButton.cs" />
+    <Compile Include="Sprites\Clock.cs" />
+    <Compile Include="Scheduling\Schedule.cs" />
+    <Compile Include="Sprites\DoorEastSprite.cs" />
+    <Compile Include="Sprites\PipeGame_Tile.cs" />
+    <Compile Include="Sprites\Quest\CheckBox.cs" />
+    <Compile Include="Sprites\Quest\CompletedNodeSprite.cs" />
+    <Compile Include="Sprites\Quest\CongratStar.cs" />
+    <Compile Include="Sprites\Quest\GameMouse.cs" />
+    <Compile Include="Sprites\Quest\ReadMoreButton.cs" />
+    <Compile Include="Sprites\StudyDeskSprite.cs" />
+    <Compile Include="Sprites\LabDeskSprite.cs" />
+    <Compile Include="Sprites\LectureDeskSprite.cs" />
+    <Compile Include="Sprites\DoorWestSprite.cs" />
+    <Compile Include="Sprites\Login\ArrowButtonSprite.cs" />
+    <Compile Include="Sprites\Login\ButtonSprite.cs" />
+    <Compile Include="Sprites\Login\GameLauncher-EmailSprite.cs" />
+    <Compile Include="Sprites\Login\GameLauncher-LoginButtonSprite.cs" />
+    <Compile Include="Sprites\Login\GameLauncher-MousePointerSprite.cs" />
+    <Compile Include="Sprites\Login\GameLauncher-PasswordSprite.cs" />
+    <Compile Include="Sprites\Login\GameLauncher-RegisterButtonSprite.cs" />
+    <Compile Include="Sprites\Login\GameLauncherSprite.cs" />
+    <Compile Include="Sprites\Login\General-TextBox.cs" />
+    <Compile Include="Sprites\Login\MousePointerSprite.cs" />
+    <Compile Include="Sprites\Opening\BusSprite.cs" />
+    <Compile Include="Sprites\Opening\LogoSprite.cs" />
+    <Compile Include="Sprites\PlayerSprite.cs" />
+    <Compile Include="Sprites\TileSprite.cs" />
+    <Compile Include="Sprites\IsometricSprite.cs" />
+    <Compile Include="Sprites\MousePointer.cs" />
+    <Compile Include="Sprites\UsableIsometricSprite.cs" />
+    <Compile Include="Sprites\VendorSprite.cs" />
+    <Compile Include="Sprites\Vendor\VendorItem.cs" />
+    <Compile Include="Sprites\Washroom\DeadFlySprite.cs" />
+    <Compile Include="Sprites\Washroom\FlagSprite.cs" />
+    <Compile Include="Sprites\Washroom\FlySprite.cs" />
+    <Compile Include="Sprites\Washroom\ShootSprite.cs" />
+    <Compile Include="Sprites\Washroom\TargetSprite.cs" />
+    <Compile Include="Sprites\Washroom\WaterSprite.cs" />
+    <Compile Include="Sprites\WordSearch\WordSearchSprite.cs" />
+    <Compile Include="Sprites\WordSearch\WordSearch_CountDownTimer.cs" />
+    <Compile Include="Sprites\WordSearch\WordSearch_EndGameSprite.cs" />
+    <Compile Include="Sprites\WordSearch\WordSearch_LineBatch.cs" />
+    <Compile Include="Sprites\WordSearch\WordSearch_MouseSprite.cs" />
+    <Compile Include="Sprites\WordSearch\WordSearch_WordFind.cs" />
+    <Compile Include="States\AreaState.cs" />
+    <Compile Include="States\Birdhunt\BirdHuntState.cs" />
+    <Compile Include="States\Birdhunt\BirdMenuState.cs" />
+    <Compile Include="States\Birdhunt\HighScoreState.cs" />
+    <Compile Include="States\EndingPopUpState.cs" />
+    <Compile Include="States\EndingState.cs" />
+    <Compile Include="States\Quests\CongratzState.cs" />
+    <Compile Include="States\Quests\EmailDetailState.cs" />
+    <Compile Include="States\Quests\EmailViewState.cs" />
+    <Compile Include="States\LectureState.cs" />
+    <Compile Include="States\Login\ConfirmationPopup.cs" />
+    <Compile Include="States\Login\GameLauncherState.cs" />
+    <Compile Include="States\Login\LoadCharacter.cs" />
+    <Compile Include="States\Login\Loading.cs" />
+    <Compile Include="States\Login\MainMenu.cs" />
+    <Compile Include="States\Login\NewCharacter.cs" />
+    <Compile Include="States\Login\Options.cs" />
+    <Compile Include="States\NetworkDefense\Character\Enemy.cs" />
+    <Compile Include="States\NetworkDefense\Character\EnemyWave.cs" />
+    <Compile Include="States\NetworkDefense\Environment\GameSprite.cs" />
+    <Compile Include="States\NetworkDefense\Environment\Map.cs" />
+    <Compile Include="States\NetworkDefense\Environment\MapBrush.cs" />
+    <Compile Include="States\NetworkDefense\Environment\MapCreator.cs" />
+    <Compile Include="States\NetworkDefense\Management\InputManager.cs" />
+    <Compile Include="States\NetworkDefense\Management\TDDamageManager.cs" />
+    <Compile Include="States\NetworkDefense\Management\TDMobManager.cs" />
+    <Compile Include="States\NetworkDefense\Management\TDWaveManager.cs" />
+    <Compile Include="States\NetworkDefense\Management\TowerDefenseManager.cs" />
+    <Compile Include="States\NetworkDefense\Management\Wave.cs" />
+    <Compile Include="States\NetworkDefense\Projectiles\BasicBolt.cs" />
+    <Compile Include="States\NetworkDefense\Projectiles\Projectile.cs" />
+    <Compile Include="States\NetworkDefense\Sprites\TdMobSprite.cs" />
+    <Compile Include="States\NetworkDefense\Sprites\TDNormalTowerSprite.cs" />
+    <Compile Include="States\NetworkDefense\Sprites\TDPointer.cs" />
+    <Compile Include="States\NetworkDefense\Sprites\TDProjectileSprite.cs" />
+    <Compile Include="States\NetworkDefense\States\TDBaseState.cs" />
+    <Compile Include="States\NetworkDefense\States\TDScoreScreenState.cs" />
+    <Compile Include="States\NetworkDefense\States\TDStartState.cs" />
+    <Compile Include="States\NetworkDefense\States\TDState.cs" />
+    <Compile Include="States\NetworkDefense\Stats\TDPlayerStats.cs" />
+    <Compile Include="States\NetworkDefense\Towers\FastTower.cs" />
+    <Compile Include="States\NetworkDefense\Towers\NormalTower.cs" />
+    <Compile Include="States\NetworkDefense\Towers\SprayTower.cs" />
+    <Compile Include="States\NetworkDefense\Towers\StrongTower.cs" />
+    <Compile Include="States\NetworkDefense\Towers\Tower.cs" />
+    <Compile Include="States\NetworkDefense\Towers\TowerBuilder.cs" />
+    <Compile Include="States\NetworkDefense\UI\Button.cs" />
+    <Compile Include="States\NetworkDefense\UI\UICreator.cs" />
+    <Compile Include="States\NetworkDefense\UI\Window.cs" />
+    <Compile Include="States\OpenningState.cs" />
+    <Compile Include="States\PipeGame_GameState.cs" />
+    <Compile Include="States\PipeGame_StartState.cs" />
+    <Compile Include="States\SleepState.cs" />
+    <Compile Include="States\StudyState.cs" />
+    <Compile Include="States\VendorState.cs" />
+    <Compile Include="States\Washroom\IntroState.cs" />
+    <Compile Include="States\Washroom\ResultState.cs" />
+    <Compile Include="States\Washroom\WashRoomState.cs" />
+    <Compile Include="States\WordSearch\WordSearch_EndGameState.cs" />
+    <Compile Include="States\WordSearch\WordSearch_MainState.cs" />
+    <Compile Include="States\WordSearch\WordSearch_WordGenerator.cs" />
+    <Compile Include="Tools\ImageDecoder.cs" />
+    <Compile Include="UI\AttributeMeters.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Game.ico" />
+    <Content Include="GameThumbnail.png" />
+    <None Include="Service References\DBCommService\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DBCommService\Game.DBCommService.Character1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DBCommService\Game.DBCommService.MinigameScore1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DBCommService\Game.DBCommService.Quest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DBCommService\Game.DBCommService.User1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DBCommService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DBCommService\configuration.svcinfo" />
+    <None Include="Service References\DBCommService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Engine\Engine.csproj">
+      <Project>{478E1321-0169-43FB-B5F2-914FC4E0913D}</Project>
+      <Name>Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GifAnimation\GifAnimation.csproj">
+      <Project>{76B7215D-8172-4FF9-A1A9-4989B0D4C15B}</Project>
+      <Name>GifAnimation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameContent\GameContent.contentproj">
+      <Name>GameContent</Name>
+      <XnaReferenceType>Content</XnaReferenceType>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 4.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="C:\Users\AlexBear\Desktop\ClassDiagram1.cd">
+      <Link>ClassDiagram1.cd</Link>
+    </None>
+    <None Include="Game_TemporaryKey.pfx" />
+    <None Include="Service References\DBCommService\DBCommService.DataContracts.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DBCommService\service.wsdl" />
+    <None Include="Service References\DBCommService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DBCommService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="end\" />
+    <Folder Include="Sprites\Textures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DBCommService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>
